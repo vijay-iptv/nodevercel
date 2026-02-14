@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Content-Type", response.headers.get("content-type"));
-    res.status(200).send(Buffer.from(buffer));
+    res.status(200).send(buffer);
 
   } catch (err) {
     res.status(500).send("Proxy failed");
