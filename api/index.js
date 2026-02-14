@@ -13,11 +13,11 @@ export default async function handler(req, res) {
       }
     });
 
-    const buffer = await response.arrayBuffer();
+    /* const buffer = await response.arrayBuffer();
 
     res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Content-Type", response.headers.get("content-type"));
-    res.status(200).send(buffer);
+    res.setHeader("Content-Type", response.headers.get("content-type")); */
+    res.status(200).send(response);
 
   } catch (err) {
     res.status(500).send("Proxy failed");
